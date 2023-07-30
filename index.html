@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Lot System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="text-center mt-3">Parking Lot System</h1>
+    <div class="container mt-4">
+        <div class="form">
+            <label for="vehicleType">Vehicle Type : </label>
+            <select id="vehicleType" class="form-control" required>
+                <option value="" disabled selected>Please Select Vehicle Type</option>
+                <option value="TwoWheeler">TwoWheeler</option>
+                <option value="FourWheeler">FourWheeler</option>
+            </select>
+            <label for="licenseNo">License Number:</label>
+            <input type="text" id="licenseNo" class="form-control" placeholder="Enter License number" required>
+
+            <label for="vehicleName">Vehicle Name:</label>
+            <input type="text" id="vehicleName" class="form-control" placeholder="Enter Vehicle Name" required>
+
+            <button onclick="parkVehicle()" class="btn btn-success btn-block mt-3">Park Vehicle</button>
+
+
+            <label for="ticketId">Ticket ID:</label>
+            <input type="text" id="ticketId" class="form-control" placeholder="Enter ticket ID" required>
+
+            <button onclick="unparkVehicle()" class="btn btn-primary btn-block mt-3">Unpark Vehicle</button>
+ 
+            <div class="button-container d-flex justify-content-between mt-3">
+                <button onclick="showAllFreeSlots()" class="btn btn-info">Show Free Space</button>
+                <button onclick="showOccupiedSlots()" class="btn btn-info">Show Occupied Space</button>
+            </div>
+        </div>
+        <div class="output mt-4">
+            <label>Output:</label>
+            <pre id="result"></pre>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
